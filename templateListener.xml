@@ -1,0 +1,12 @@
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/templatelistener.xsd">
+	<import>
+		<!-- user -->
+			<templatelistener name="newEntryButtonDetailPage">
+				<environment>user</environment>
+				<templatename>entry</templatename>
+				<eventname>contentFooterNavigation</eventname>
+				<templatecode><![CDATA[{if $__wcf->user->userID && $__wcf->session->getPermission('user.lexicon.canCreateEntry')}<li><a href="{link application='lexicon' controller='EntryAdd'}{/link}" title="{lang}lexicon.entry.add{/lang}" class="button"><span class="icon icon16 fa-asterisk"></span> <span>{lang}lexicon.entry.button.add{/lang}</span></a></li>{/if}]]></templatecode>
+			</templatelistener>
+		<!-- /user -->
+	</import>
+</data>
